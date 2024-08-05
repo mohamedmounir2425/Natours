@@ -1,0 +1,4 @@
+@function calcWidth($colNum) {
+
+    @return calc((100% - #{$gutter-horizontal} * #{$colNum - 1}) / #{$colNum});
+}
