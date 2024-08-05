@@ -1,64 +1,57 @@
-// .row {
-//     max-width: $grid-width;
-//     margin: 0 auto;
-//     background-color: #eee;
-
-//     &:not(:last-child) {
-//         margin-bottom:  $gutter-vartical;
-//     }
-
-//     @include clear-fix;
-
-//     [class^="col-"] {
-
-//         background-color: orangered;
-//         padding: 10px;
-//         float: left;
-//         &:not(:last-child) {
-//             margin-right: $gutter-horizontal;
-//         }
-//     }
-
-//     .col-1-of-2 {
-//         width: calc((100% - #{$gutter-horizontal}) / 2);
-//         background-color: orangered;
-//         padding: 10px;
-//         float: left;
-
-//     }
-
-//     .col-1-of-3 {
-//         width:calcWidth(3);
-
-//     }
-//     .col-1-of-4 {
-//         width:calcWidth(4);
-
-//     }
-//     .col-2-of-3 {
-//         width:calc((#{calcWidth(3)} * 2) + #{$gutter-horizontal});
-//     }
-//     .col-3-of-4 {
-//         width:calc((#{calcWidth(4)} *3) + #{$gutter-horizontal * 2});
-//     }
-// }
-
 .row {
   max-width: $grid-width;
   margin: 0 auto;
-  background-color: #eee;
 
   &:not(:last-child) {
     margin-bottom: $gutter-vartical;
   }
 
   @include clear-fix;
-  .col-1-of-2 {
-    float: left;
-    width: calc((100% - #{$gutter-horizontal}) / 2);
 
+  [class^="col-"] {
+    // background-color: orangered;
+    // padding: 10px;
+    float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
   }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    float: left;
+  }
+
+  .col-1-of-3 {
+    width: calcWidth(3);
+  }
+  .col-1-of-4 {
+    width: calcWidth(4);
+  }
+  .col-2-of-3 {
+    width: calc((#{calcWidth(3)} * 2) + #{$gutter-horizontal});
+  }
+  .col-3-of-4 {
+    width: calc((#{calcWidth(4)} * 3) + #{$gutter-horizontal * 2});
+  }
 }
+
+// .row {
+//   max-width: $grid-width;
+//   margin: 0 auto;
+//   background-color: #eee;
+
+//   &:not(:last-child) {
+//     margin-bottom: $gutter-vartical;
+//   }
+
+//   @include clear-fix;
+//   .col-1-of-2 {
+//     float: left;
+//     width: calc((100% - #{$gutter-horizontal}) / 2);
+
+//     &:not(:last-child) {
+//       margin-right: $gutter-horizontal;
+//     }
+//   }
+// }
