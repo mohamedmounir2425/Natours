@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     position: relative;
@@ -9,6 +10,8 @@
     display: inline-block;
     border-radius: 10rem;
     transition: all 0.2s;
+    border: none;
+    cursor: pointer;
   }
   &:hover {
     transform: translateY(-3px);
