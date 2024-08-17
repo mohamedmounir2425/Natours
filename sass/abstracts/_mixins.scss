@@ -1,14 +1,46 @@
 @mixin clear-fix {
-    &::after {
-        content:"";
-        display: table;
-        clear: both;
-    }
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//MEDIA QUERY MANAGER
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin respond($type) {
+  @if $type == phone {
+    @media (max-width: 37.5em)  {
+      @content;
+    }
+  } @else if $type == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  } @else if $type == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  } @else if $type == desktop {
+    @media (max-width: 112.5em ) {
+      @content;
+    }
+  } @else if $type == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
 }
