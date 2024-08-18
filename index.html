@@ -16,8 +16,6 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
-
-
     <div class="navigation">
       <input id="navi-toggle" type="checkbox" class="navigation__checkbox" />
       <label for="navi-toggle" class="navigation__button">
@@ -102,6 +100,27 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width= 37.5em) 25vw, (max-width= 56.25em) 17vw, 300px"
+                class="composition__photo composition__photo--p1"
+                alt="photo"
+                src="img/nat-1-large.jpg"
+              />
+              <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width= 37.5em) 25vw, (max-width= 56.25em) 17vw, 300px"
+                class="composition__photo composition__photo--p2"
+                alt="photo"
+                src="img/nat-2-large.jpg"
+              />
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width= 37.5em) 25vw, (max-width= 56.25em) 17vw, 300px"
+                class="composition__photo composition__photo--p3"
+                alt="photo"
+                src="img/nat-3-large.jpg"
+              />
+              <!-- <img
                 src="img/nat-1-large.jpg"
                 alt="photo"
                 class="composition__photo composition__photo--p1"
@@ -113,7 +132,7 @@
                 src="img/nat-3-large.jpg"
                 alt="photo"
                 class="composition__photo composition__photo--p3"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -182,9 +201,6 @@
 
         <div class="row">
           <div class="col-1-of-3">
-
-
-            
             <div class="card">
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--1">&nbsp;</div>
@@ -216,9 +232,6 @@
                 </div>
               </div>
             </div>
-
-
-
           </div>
           <div class="col-1-of-3">
             <div class="card">
@@ -428,11 +441,21 @@
 
       <footer class="footer">
         <div class="footer__logo-box">
-          <img
-            src="img/logo-green-2x.png"
-            alt="Full Logo"
-            class="footer__logo"
-          />
+          <picture>
+            <source
+              srcset="
+                img/logo-green-small-1x.png 1x,
+                img/logo-green-small-2x.png 2x
+              "
+              media="(max-width: 37.5em)"
+            />
+            <img
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              alt="Full Logo"
+              class="footer__logo"
+              src="img/logo-green-2x.png"
+            />
+          </picture>
         </div>
 
         <div class="row">
@@ -472,7 +495,6 @@
         </div>
       </footer>
     </main>
-
 
     <div class="popup" id="popup">
       <div class="popup__content">
@@ -529,7 +551,5 @@
         <div class="col-3-of-4">col-3-of-4</div>
       </div>
     </section> -->
-  
-   
   </body>
 </html>
